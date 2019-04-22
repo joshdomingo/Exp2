@@ -1,0 +1,56 @@
+#include <iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a, b;
+	float hours, total;
+	char pack;
+	cout << "Choose your package (A,B,C): ";
+	cin >> pack;
+	cout << "Hours used: ";
+	cin >> hours;
+
+	a = 995 + (hours - 10) * 20;
+	b = 1495 + (hours - 20) * 10;
+
+	switch (pack)
+	{
+	case'A':
+		if (hours <= 10)
+			cout << "The total amount due is Php 995" << endl;
+		else
+			cout << "The total amount due is Php " << a << endl;
+		break;
+	case'a':
+		if (hours <= 10)
+			cout << "The total amount due is Php 995" << endl;
+		else
+			cout << "The total amount due is Php " << a << endl;
+		break;
+
+	case'B':
+		if (hours <= 20)
+			cout << "The total amount due is Php 1495" << endl;
+		else
+			cout << "The total amount due is Php " << b << endl;
+		break;
+	case'b':
+		if (hours <= 20)
+			cout << "The total amount due is Php 1495" << endl;
+		else
+			cout << "The total amount due is Php " << b << endl;
+		break;
+
+	case'C':
+		cout << "The total amount due is Php 1995" << endl;
+		break;
+	case'c':
+		cout << "The total amount due is Php 1995" << endl;
+		break;
+	default:
+		cout << "Enter a valid package.";
+	}
+	_getch();
+	return 0;
+}
