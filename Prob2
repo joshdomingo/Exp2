@@ -1,0 +1,28 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int g;
+	float u, total, late, paid, c ;
+	cout << "Gallons of water consumed: ";
+	cin >> g;
+	cout << "Amount paid: Php ";
+	cin >> paid;
+
+	u = 1.1;
+	total = 35 + (u * g);
+	late = total + 20;
+	c = paid - total;
+
+	if (paid < total)
+		cout << "Your water bill is Php " << late <<", including a Php 20 late charge."<< endl;
+	else if (paid > total)
+		cout << "Your water bill is Php " << total << "." << endl << "Your change is Php " << c <<"." << endl;
+	else
+		cout << "Your water bill is Php " << total << ". You paid the right amount." << endl;
+	    
+
+	_getch();
+	return 0;
+}
