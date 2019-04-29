@@ -1,0 +1,29 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int row, col,r, c;
+	char cha;
+	cout << "How many rows: ";
+	cin >> row;
+	cout << "How many columns: ";
+	cin >> col;
+	cout << "Character: ";
+	cin >> cha;
+	for (r = 1 ; r <= row ; r++)
+	{
+		for (c = 1 ; c < col ; c++)
+		{
+			cout << " ";
+		}
+		for (c = 1 ; c <= col ; c++)
+		{
+			cout << cha;
+		}
+		cout << endl;
+	}
+
+	_getch();
+	return 0;
+}
