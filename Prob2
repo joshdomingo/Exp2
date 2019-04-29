@@ -3,25 +3,23 @@
 using namespace std;
 int main()
 {
+
 	int g;
-	float u, total, late, paid, c ;
+	float use, total, late, unpaid ;
 	cout << "Gallons of water consumed: ";
 	cin >> g;
-	cout << "Amount paid: Php ";
-	cin >> paid;
+	cout << "Unpaid Balance: Php ";
+	cin >> unpaid;
 
-	u = 1.1;
-	total = 35 + (u * g);
-	late = total + 20;
-	c = paid - total;
+	use = 1.1;
+	total = 35 + (use * g);
+	late = unpaid+total + 20;
 
-	if (paid < total)
-		cout << "Your water bill is Php " << late <<", including a Php 20 late charge."<< endl;
-	else if (paid > total)
-		cout << "Your water bill is Php " << total << "." << endl << "Your change is Php " << c <<"." << endl;
-	else
-		cout << "Your water bill is Php " << total << ". You paid the right amount." << endl;
-	    
+	if (unpaid>0)
+		cout << "Your water bill is Php " << late <<", including a P20 late charge."<< endl;
+	else 
+		cout << "Your water bill is Php " << total << "." << endl;
+	
 
 	_getch();
 	return 0;
