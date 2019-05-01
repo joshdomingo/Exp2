@@ -12,12 +12,7 @@ int main()
 	cout << "Y value: ";
 	cin >> y;
 	z = 2.5;
-	/*The value of V depends on the values of x and y as follows:
-V= xyz when x = 1 and 1<y<5
-V= x + y/z when x= 1 and y>=5
-V= |(x – y)/z| when x = 2 and y<=5
-V= x-√𝑦 + 𝑧 when x = 2 and y>5
-V = x +y + z for other values of x and y*/
+
 	switch (x)
 	{
 	case 1:
