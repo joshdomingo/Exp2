@@ -4,19 +4,23 @@ using namespace std;
 int main()
 {
 
-	int g;
-	float use, total, late, unpaid ;
-	cout << "Gallons of water consumed: ";
-	cin >> g;
-	cout << "Unpaid Balance: Php ";
-	cin >> unpaid;
+	int g1,g2,g;
+	float use, total, late, paid, unpaid ;
+	cout << "Current meter reading in gallons: ";
+	cin >> g1;
+	cout << "Previous meter reading in gallons: ";
+	cin >> g2;
+	cout << "Amount Paid: Php ";
+	cin >> paid;
 
 	use = 1.1;
+	g = g1 - g2;
 	total = 35 + (use * g);
-	late = unpaid+total + 20;
+	unpaid = total - paid;
+	late = unpaid + 20;
 
-	if (unpaid>0)
-		cout << "Your water bill is Php " << late <<", including a P20 late charge."<< endl;
+	if (paid < total)
+		cout << "Your water bill is Php " << total << ". "<<endl<<"You still need to pay Php "<<late<<" which includes a Php20 late charge." << endl;
 	else 
 		cout << "Your water bill is Php " << total << "." << endl;
 	
