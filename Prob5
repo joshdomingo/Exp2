@@ -4,6 +4,7 @@ using namespace std;
 int main()
 {
 	int count;
+	cout << "Counting...\n";
 	for (count = 1; count <= 30; count++)
 	{
 		if (count == 30)
@@ -20,7 +21,7 @@ int main()
 		else if (count == 29) continue;
 		else
 			cout << count << ",";
-		
+
 	}
 
 	_getch();
