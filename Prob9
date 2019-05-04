@@ -3,24 +3,20 @@
 using namespace std;
 int main()
 {
-	int row, col,r, c;
+	int row, col, r, c;
 	char cha;
 	cout << "How many rows: ";
 	cin >> row;
 	cout << "How many columns: ";
 	cin >> col;
-	cout << "Character: ";
+	cout << "Choose a character: ";
 	cin >> cha;
-	for (r = 1 ; r <= row ; r++)
+	for (r = 1; r <= row; r++)
 	{
-		for (c = 1 ; c < col ; c++)
-		{
-			cout << " ";
-		}
-		for (c = 1 ; c <= col ; c++)
-		{
-			cout << cha;
-		}
+			for (c = 1; c <= col; c++)
+			{
+				cout << cha;
+			}
 		cout << endl;
 	}
 
