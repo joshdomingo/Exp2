@@ -4,8 +4,8 @@ using namespace std;
 int main()
 {
 
-	int g1,g2,g;
-	float use, total, late, paid, unpaid ;
+	int g1, g2, g;
+	float use, total, late, paid, unpaid;
 	cout << "Current meter reading in gallons: ";
 	cin >> g1;
 	cout << "Previous meter reading in gallons: ";
@@ -20,10 +20,12 @@ int main()
 	late = unpaid + 20;
 
 	if (paid < total)
-		cout << "Your water bill is Php " << total << ". "<<endl<<"You still need to pay Php "<<late<<" which includes a Php20 late charge." << endl;
-	else 
+		cout << "Your water bill is Php " << total << ". " << endl << "You still need to pay Php " << late << " which includes a Php 20 late charge." << endl;
+	else if(paid>total)
+		cout << "Your water bill is only Php " << total << "." << endl;
+	else
 		cout << "Your water bill is Php " << total << "." << endl;
-	
+
 
 	_getch();
 	return 0;
